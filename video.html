@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Concerto - Margarite Waltz - Miguel Lima</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: #f5f1e8;
+            color: #40372f;
+            line-height: 1.7;
+        }
+
+        /* Cabeçalho */
+
+        header {
+            text-align: center;
+            padding: 80px 20px 50px;
+            background-color: #eee8dc;
+            border-bottom: 1px solid #d6cbbb;
+        }
+
+        header h1 {
+            font-size: 42px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            color: #4a3b32;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #7a6b5d;
+            font-style: italic;
+        }
+
+        /* Container principal */
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 70px 25px;
+        }
+
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            font-weight: normal;
+            color: #4a3b32;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            display: block;
+            width: 70px;
+            height: 2px;
+            background-color: #a98d70;
+            margin: 0 auto;
+        }
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            margin-bottom: 65px;
+        }
+
+        .artwork {
+            background-color: #faf8f3;
+            padding: 18px;
+            border: 1px solid #d8cebf;
+            box-shadow: 0 8px 25px rgba(60, 45, 30, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .artwork:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(60, 45, 30, 0.14);
+        }
+
+        .artwork img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        .artwork h3 {
+            font-size: 22px;
+            font-weight: normal;
+            color: #4a3b32;
+            margin-bottom: 12px;
+        }
+
+        .artwork p {
+            font-size: 16px;
+            color: #6c6157;
+            text-align: justify;
+        }
+
+
+        .museum-description {
+            max-width: 900px;
+            margin: 0 auto 70px;
+            text-align: center;
+        }
+
+        .museum-description p {
+            font-size: 17px;
+            color: #665b51;
+            margin-bottom: 15px;
+        }
+
+
+        .video-section {
+            background-color: #ebe4d8;
+            padding: 60px 30px;
+            border: 1px solid #d8cebf;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 12px 35px rgba(50, 40, 30, 0.15);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            background-color: #e4dccf;
+            color: #76695d;
+            font-size: 14px;
+            border-top: 1px solid #d2c6b7;
+        }
+
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 55px 20px 40px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            main {
+                padding: 45px 18px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .artwork img {
+                height: auto;
+            }
+
+            .section-title h2 {
+                font-size: 25px;
+            }
+
+            .video-section {
+                padding: 35px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Concerto - Margarite Waltz - Miguel Lima</h1>
+        <p>Uma interpretação musical acompanhada pela história de seu instrumento</p>
+    </header>
+
+    <main>
+
+
+        <section>
+
+            <div class="section-title">
+                <h2>O Instrumento</h2>
+                <span></span>
+            </div>
+
+            <div class="museum-description">
+                <p>
+                    Este instrumento de cordas representa não apenas uma ferramenta para
+                    a produção musical, mas também uma peça marcada pela tradição,
+                    pelo trabalho artesanal e pela riqueza estética.
+                </p>
+
+                <p>
+                    Suas curvas cuidadosamente esculpidas, a textura da madeira e os
+                    detalhes de sua construção revelam a relação entre arte, técnica
+                    e música que acompanha a história dos instrumentos de cordas.
+                </p>
+            </div>
+
+            <div class="gallery">
+
+                <article class="artwork">
+
+                    <img
+                        src="img/viola1.jpg"
+                        alt="Vista frontal do violino">
+
+                    <p>
+                         Na parte traseira, é possível observar com maior evidência
+                        os veios da madeira e seu acabamento artesanal. As características
+                        visuais da peça evidenciam o cuidado empregado na construção,
+                        transformando o instrumento em uma verdadeira expressão de
+                        arte e marcenaria musical.
+                    </p>
+                    
+                </article>
+                
+                
+                <article class="artwork">
+                    
+                    <img
+                    src="img/viola2.jpg"
+                    alt="Vista traseira do violino">
+                    
+                    
+                    <p>
+                        Na vista frontal, destacam-se as formas clássicas do instrumento,
+                        com suas curvas simétricas, as aberturas em formato de "f"
+                        e o acabamento em madeira natural. O desenho do corpo foi
+                        cuidadosamente desenvolvido para unir estética e funcionalidade,
+                        contribuindo para a projeção e a qualidade sonora.
+                       
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Seção do vídeo -->
+
+        <section class="video-section">
+
+            <div class="section-title">
+                <h2>Concerto</h2>
+                <span></span>
+            </div>
+
+            <div class="museum-description">
+                <p>
+                    <strong>Margarite Waltz</strong>
+                </p>
+
+                <p>
+                    Interpretação de Miguel Lima.
+                </p>
+            </div>
+
+            <div class="video-container">
+
+                <iframe
+                    src="https://www.youtube.com/embed/gGNMnkSc0zA"
+                    title="Concerto - Margarite Waltz - Miguel Lima"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Concerto - Margarite Waltz · Miguel Lima</p>
+    </footer>
+
+</body>
+
+</html>
+```

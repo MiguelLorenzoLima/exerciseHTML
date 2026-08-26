@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f5f2;
+    color: #302b36;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #fffdf9;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(92, 68, 110, 0.12);
+}
+
+h1 {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    text-align: center;
+    color: #8064a2;
+    font-size: 32px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5d4b6f;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8cce2;
+    border-radius: 10px;
+    background-color: #fffefa;
+    color: #302b36;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #a98bc4;
+    box-shadow: 0 0 0 3px rgba(169, 139, 196, 0.18);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+    accent-color: #9b7bbb;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline;
+    margin-right: 18px;
+    font-weight: normal;
+    color: #4f4657;
+}
+
+input[type="file"] {
+    padding: 9px;
+    background-color: #faf7fc;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button[type="submit"] {
+    background-color: #a98bc4;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #9270b0;
+}
+
+button[type="reset"] {
+    margin-left: 10px;
+    background-color: #eee7f2;
+    color: #665574;
+}
+
+button[type="reset"]:hover {
+    background-color: #e2d8e9;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    button[type="reset"] {
+        margin-left: 0;
+    }
+}
