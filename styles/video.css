@@ -1,67 +1,62 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* =====================================================
+   CONCERTO PAGE — Reference Design
+   ===================================================== */
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background-color: #f5f1e8;
-    color: #40372f;
-    line-height: 1.7;
-}
-
+/* --- Header --- */
 header {
     text-align: center;
     padding: 80px 20px 50px;
-    background-color: #eee8dc;
-    border-bottom: 1px solid #d6cbbb;
+    background-color: var(--color-bg-hero);
+    border-bottom: 1px solid var(--color-border-light);
 }
 
 header h1 {
-    font-size: 42px;
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 5vw, 42px);
     font-weight: normal;
     letter-spacing: 2px;
-    color: #4a3b32;
+    color: var(--color-text-heading);
     margin-bottom: 15px;
 }
 
 header p {
     font-size: 18px;
-    color: #7a6b5d;
+    color: var(--color-text-light);
     font-style: italic;
+    margin-bottom: 0;
 }
 
-/* Container principal */
-
+/* --- Main container --- */
 main {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 70px 25px;
+    padding: 70px var(--content-padding);
 }
 
-
+/* --- Section title --- */
 .section-title {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: var(--space-lg);
 }
 
 .section-title h2 {
-    font-size: 40px;
+    font-family: var(--font-heading);
+    font-size: clamp(24px, 5vw, 40px);
     font-weight: normal;
-    color: #4a3b32;
+    color: var(--color-text-heading);
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .section-title span {
     display: block;
     width: 70px;
     height: 2px;
-    background-color: #a98d70;
+    background-color: var(--color-accent);
     margin: 0 auto;
 }
 
-
+/* --- Gallery grid --- */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -69,17 +64,18 @@ main {
     margin-bottom: 65px;
 }
 
+/* --- Artwork cards --- */
 .artwork {
-    background-color: #faf8f3;
+    background-color: var(--color-bg-card);
     padding: 18px;
-    border: 1px solid #d8cebf;
-    box-shadow: 0 8px 25px rgba(60, 45, 30, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 8px 25px var(--color-shadow);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .artwork:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(60, 45, 30, 0.14);
+    box-shadow: 0 12px 30px var(--color-shadow-md);
 }
 
 .artwork img {
@@ -90,20 +86,14 @@ main {
     margin-bottom: 25px;
 }
 
-.artwork h3 {
-    font-size: 22px;
-    font-weight: normal;
-    color: #4a3b32;
-    margin-bottom: 12px;
-}
-
 .artwork p {
     font-size: 16px;
-    color: #6c6157;
+    color: var(--color-text-muted);
     text-align: justify;
+    margin-bottom: 0;
 }
 
-
+/* --- Museum description --- */
 .museum-description {
     max-width: 900px;
     margin: 0 auto 70px;
@@ -112,22 +102,31 @@ main {
 
 .museum-description p {
     font-size: 17px;
-    color: #665b51;
+    color: var(--color-text-muted);
     margin-bottom: 15px;
 }
 
+.museum-description p:last-child {
+    margin-bottom: 0;
+}
 
+.museum-description strong {
+    color: var(--color-text-heading);
+    font-family: var(--font-heading);
+}
+
+/* --- Video section --- */
 .video-section {
-    background-color: #ebe4d8;
+    background-color: var(--color-bg-alt);
     padding: 60px 30px;
-    border: 1px solid #d8cebf;
+    border: 1px solid var(--color-border);
 }
 
 .video-container {
     max-width: 900px;
     margin: 0 auto;
     aspect-ratio: 16 / 9;
-    box-shadow: 0 12px 35px rgba(50, 40, 30, 0.15);
+    box-shadow: 0 12px 35px var(--color-shadow-lg);
 }
 
 .video-container iframe {
@@ -137,25 +136,14 @@ main {
     display: block;
 }
 
-
-footer {
-    text-align: center;
-    padding: 35px 20px;
-    background-color: #e4dccf;
-    color: #76695d;
-    font-size: 14px;
-    border-top: 1px solid #d2c6b7;
-}
-
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
 
 @media (max-width: 768px) {
 
     header {
         padding: 55px 20px 40px;
-    }
-
-    header h1 {
-        font-size: 30px;
     }
 
     main {
