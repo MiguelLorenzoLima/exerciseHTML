@@ -30,16 +30,16 @@
     --color-shadow-md: rgba(60, 45, 30, 0.12);
     --color-shadow-lg: rgba(50, 40, 30, 0.15);
 
-    /* Input focus — lilac/purple accent */
-    --color-focus: #a98bc4;
-    --color-focus-ring: rgba(169, 139, 196, 0.18);
+    /* Input focus — warm bronze accent */
+    --color-focus: #a98d70;
+    --color-focus-ring: rgba(169, 141, 112, 0.18);
 
-    /* Button primary — lilac/purple */
-    --color-btn-primary: #a98bc4;
-    --color-btn-primary-hover: #9270b0;
-    --color-btn-secondary-bg: #eee7f2;
-    --color-btn-secondary-text: #665574;
-    --color-btn-secondary-hover: #e2d8e9;
+    /* Button primary — warm bronze */
+    --color-btn-primary: #a98d70;
+    --color-btn-primary-hover: #967a5f;
+    --color-btn-secondary-bg: #ebe4d8;
+    --color-btn-secondary-text: #6c6157;
+    --color-btn-secondary-hover: #d8cebf;
 
     /* Typography */
     --font-heading: Georgia, "Times New Roman", "Palatino Linotype", serif;
