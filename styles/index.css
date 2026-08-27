@@ -1,16 +1,58 @@
 /* =====================================================
-   INDEX PAGE — Home
+   INDEX PAGE
    ===================================================== */
 
-/* --- Image Carousel --- */
+header {
+    text-align: center;
+    padding: 80px 20px 50px;
+    background-color: var(--color-bg-hero);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: var(--color-text-heading);
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 18px;
+    color: var(--color-text-light);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 70px var(--content-padding);
+}
+
+section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: normal;
+    color: var(--color-text-heading);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 #carroca {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    max-width: var(--max-width-narrow);
+    max-width: 900px;
     height: auto;
     aspect-ratio: 2 / 1;
-    margin: var(--space-xl) auto var(--space-sm) auto;
+    margin: 5rem auto 1rem auto;
+    gap: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
 }
 
 #carroca img {
@@ -20,30 +62,36 @@
     object-fit: cover;
     opacity: 0.8;
     transition: 0.5s ease;
-    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    vertical-align: top;
 }
 
 #carroca img:hover {
     cursor: crosshair;
-    flex: 0 0 300px;
+    flex: 0 0 180px;
     opacity: 1;
-    filter: contrast(120%);
+    filter: contrast(100%);
 }
 
-/* --- Home intro section --- */
-.home-intro h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(24px, 4vw, 40px);
-    font-weight: normal;
-    color: var(--color-text-heading);
-    letter-spacing: 2px;
-}
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
 
-/* --- Responsive --- */
 @media (max-width: 768px) {
+    header {
+        padding: 55px 20px 40px;
+    }
+
+    main {
+        padding: 45px 18px;
+    }
+
     #carroca {
         width: 95%;
-        margin-top: var(--space-lg);
+        margin-top: 3rem;
     }
 
     #carroca img {

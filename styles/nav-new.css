@@ -75,7 +75,7 @@
     background-color: var(--color-bg-surface);
     border: 1px solid var(--color-border);
     border-radius: 50px;
-    box-shadow: 0 6px 20px var(--color-shadow);
+    box-shadow: none;
     position: relative;
     z-index: 2;
 }
@@ -104,7 +104,7 @@
 .nav-link.active {
     background-color: var(--color-btn-primary);
     color: var(--color-text-on-accent);
-    box-shadow: 0 4px 12px rgba(169, 139, 196, 0.25);
+    box-shadow: 0 4px 12px rgba(169, 141, 112, 0.25);
     letter-spacing: 0.8px;
 }
 
