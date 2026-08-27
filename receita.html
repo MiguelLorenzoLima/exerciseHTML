@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Receita</title>
+    <title>Receita de Pudim</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/nav-new.css">
-    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/receita.css">
 </head>
 
 <body>
@@ -43,10 +43,10 @@
                     <a href="concerto.html" class="nav-link" role="menuitem">Concerto</a>
                 </li>
                 <li role="none">
-                    <a href="receita.html" class="nav-link" role="menuitem">Receita</a>
+                    <a href="receita.html" class="nav-link active" role="menuitem">Receita</a>
                 </li>
                 <li role="none">
-                    <a href="form.html" class="nav-link active" role="menuitem">Nova Receita</a>
+                    <a href="form.html" class="nav-link" role="menuitem">Nova Receita</a>
                 </li>
             </ul>
 
@@ -66,88 +66,100 @@
         </div>
     </nav>
 
-    <header class="form-header">
-        <h1>Adicionar nova receita</h1>
-        <p>Preencha os campos abaixo para cadastrar uma nova receita</p>
-    </header>
+    <main class="receita">
 
-    <main class="form-main">
-        <div class="form-container">
-
-            <form>
-
-                <div class="form-group">
-                    <label for="nome" class="form-label">Nome da receita</label>
-                    <input type="text" id="nome" name="nome" class="input" placeholder="Digite o nome da receita">
-                </div>
-
-                <div class="form-group">
-                    <label for="categoria" class="form-label">Categoria</label>
-                    <select id="categoria" name="categoria" class="select">
-                        <option value="">Selecione uma categoria</option>
-                        <option value="sobremesa">Sobremesa</option>
-                        <option value="almoco">Almoço</option>
-                        <option value="jantar">Jantar</option>
-                        <option value="lanche">Lanche</option>
-                        <option value="bebida">Bebida</option>
-                    </select>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group form-group-half">
-                        <label for="tempo" class="form-label">Tempo de preparo</label>
-                        <input type="time" id="tempo" name="tempo" class="input">
-                    </div>
-
-                    <div class="form-group form-group-half">
-                        <label for="porcoes" class="form-label">Quantidade de porções</label>
-                        <input type="number" id="porcoes" name="porcoes" class="input" min="1" placeholder="Ex: 10">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="ingredientes" class="form-label">Ingredientes</label>
-                    <textarea id="ingredientes" name="ingredientes" class="textarea" rows="6" placeholder="Digite os ingredientes da receita"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="preparo" class="form-label">Modo de preparo</label>
-                    <textarea id="preparo" name="preparo" class="textarea" rows="8" placeholder="Digite o modo de preparo"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Dificuldade</label>
-                    <div class="form-radio-group">
-                        <label class="form-label-inline">
-                            <input type="radio" id="facil" name="dificuldade" value="facil" class="input-radio">
-                            Fácil
-                        </label>
-                        <label class="form-label-inline">
-                            <input type="radio" id="medio" name="dificuldade" value="medio" class="input-radio">
-                            Médio
-                        </label>
-                        <label class="form-label-inline">
-                            <input type="radio" id="dificil" name="dificuldade" value="dificil" class="input-radio">
-                            Difícil
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label-inline">
-                        <input type="checkbox" id="publicar" name="publicar" class="input-checkbox">
-                        Publicar receita imediatamente
-                    </label>
-                </div>
-
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Adicionar receita</button>
-                    <button type="reset" class="btn btn-secondary">Limpar formulário</button>
-                </div>
-
-            </form>
-
+        <div class="receita-hero">
+            <img class="imagem-receita"
+                src="https://www.seara.com.br/wp-content/uploads/2025/09/mobile-pudim-de-liquidificador.jpg"
+                alt="Pudim de liquidificador">
         </div>
+
+        <section class="receita-info-bar">
+            <div class="info">
+                <span class="icone" aria-hidden="true">&#9201;</span>
+                <strong>Preparo:</strong>
+                <span>01:30</span>
+            </div>
+
+            <div class="info">
+                <span class="icone" aria-hidden="true">&#9743;</span>
+                <strong>Porções:</strong>
+                <span>10</span>
+            </div>
+        </section>
+
+        <section class="receita-conteudo">
+
+            <span class="categoria">SOBREMESA</span>
+
+            <h1>Pudim de liquidificador</h1>
+
+            <p class="descricao">
+                Um delicioso pudim de liquidificador, cremoso e fácil
+                de preparar. Uma sobremesa clássica que combina com
+                qualquer ocasião.
+            </p>
+
+            <div class="receita-divider"></div>
+
+            <h2>Ingredientes</h2>
+
+            <ul class="ingredientes">
+                <li>1 lata de leite condensado</li>
+                <li>2 medidas da lata de leite integral</li>
+                <li>3 ovos</li>
+                <li>1 xícara de açúcar para a calda</li>
+                <li>1/2 xícara de água</li>
+            </ul>
+
+            <div class="receita-divider"></div>
+
+            <h2>Modo de preparo</h2>
+
+            <ol class="modo-preparo">
+                <li>
+                    Comece preparando a calda. Coloque o açúcar
+                    em uma panela e leve ao fogo baixo.
+                </li>
+                <li>
+                    Mexa até o açúcar derreter completamente e
+                    adquirir uma cor dourada.
+                </li>
+                <li>
+                    Acrescente a água cuidadosamente e misture
+                    até formar uma calda homogênea.
+                </li>
+                <li>
+                    Despeje a calda em uma forma para pudim,
+                    espalhando-a pelo fundo e pelas laterais.
+                </li>
+                <li>
+                    No liquidificador, coloque o leite condensado,
+                    o leite e os ovos.
+                </li>
+                <li>
+                    Bata todos os ingredientes por aproximadamente
+                    2 minutos, até obter uma mistura homogênea.
+                </li>
+                <li>
+                    Despeje a mistura na forma caramelizada.
+                </li>
+                <li>
+                    Cubra a forma com papel-alumínio e asse em
+                    banho-maria no forno preaquecido a 180 °C
+                    por aproximadamente 1 hora.
+                </li>
+                <li>
+                    Retire do forno e deixe esfriar completamente.
+                </li>
+                <li>
+                    Leve à geladeira por algumas horas. Depois,
+                    desenforme e sirva.
+                </li>
+            </ol>
+
+        </section>
+
     </main>
 
     <footer class="site-footer">

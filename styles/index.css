@@ -1,45 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* =====================================================
+   INDEX PAGE — Home
+   ===================================================== */
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background-color: #f5f1e8;
-    color: #40372f;
-    line-height: 1.7;
-}
-
-header {
-    text-align: center;
-    padding: 80px 20px 50px;
-    background-color: #eee8dc;
-    border-bottom: 1px solid #d6cbbb;
-}
-
-header h1 {
-    font-size: 42px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    color: #4a3b32;
-    margin-bottom: 15px;
-}
-
-header p {
-    font-size: 18px;
-    color: #7a6b5d;
-    font-style: italic;
-}
-
+/* --- Image Carousel --- */
 #carroca {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    max-width: 900px;
+    max-width: var(--max-width-narrow);
     height: auto;
     aspect-ratio: 2 / 1;
-    margin: 5rem auto 1rem auto;
+    margin: var(--space-xl) auto var(--space-sm) auto;
 }
 
 #carroca img {
@@ -47,8 +18,9 @@ header p {
     min-width: 0;
     height: 100%;
     object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
+    opacity: 0.8;
+    transition: 0.5s ease;
+    border-radius: 2px;
 }
 
 #carroca img:hover {
@@ -58,32 +30,32 @@ header p {
     filter: contrast(120%);
 }
 
-body>section:not(#carroca) {
-    display: block;
-    width: auto;
-    max-width: none;
-    height: auto;
-    aspect-ratio: auto;
-    margin: 0;
+/* --- Home intro section --- */
+.home-intro h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: normal;
+    color: var(--color-text-heading);
+    letter-spacing: 2px;
 }
 
-body>section:not(#carroca) h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 0;
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    #carroca {
+        width: 95%;
+        margin-top: var(--space-lg);
+    }
+
+    #carroca img {
+        height: 180px;
+    }
+
+    #carroca img:hover {
+        flex: 1 1 60%;
+    }
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer h4 {
-    font-size: 2rem;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     #carroca {
         flex-wrap: wrap;
         aspect-ratio: auto;
@@ -92,172 +64,10 @@ footer h4 {
 
     #carroca img {
         flex: 1 1 40%;
-        height: 150px;
+        height: 140px;
     }
 
     #carroca img:hover {
         flex: 1 1 60%;
-    }
-
-    header {
-        padding: 55px 20px 40px;
-    }
-
-    header h1 {
-        font-size: 30px;
-    }
-}
-
-.receita {
-    width: 100%;
-    max-width: 730px;
-    margin: 0 auto;
-    padding-bottom: 50px;
-}
-
-.imagem-receita {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-}
-
-.informacoes {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 25px;
-    padding: 18px 0;
-    font-size: 17px;
-}
-
-.info {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.icone {
-    font-size: 22px;
-}
-
-.conteudo {
-    padding: 0 25px;
-}
-
-.categoria {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 28px;
-    font-size: 13px;
-    color: #555;
-}
-
-h1 {
-    font-size: 30px;
-    line-height: 1.2;
-    margin-bottom: 18px;
-}
-
-.descricao {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 35px;
-}
-
-h2 {
-    font-size: 22px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.ingredientes {
-    padding-left: 20px;
-}
-
-.ingredientes li {
-    padding-left: 5px;
-    margin-bottom: 12px;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.ingredientes li::marker {
-    color: #e86f1c;
-    font-size: 18px;
-}
-
-.modo-preparo {
-    padding-left: 25px;
-}
-
-.modo-preparo li {
-    padding-left: 8px;
-    margin-bottom: 18px;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.modo-preparo li::marker {
-    color: #e86f1c;
-    font-weight: bold;
-}
-
-footer {
-    width: 100%;
-    padding: 25px;
-    text-align: center;
-    background-color: #e4dccf;
-    color: #76695d;
-    border-top: 1px solid #d2c6b7;
-}
-
-footer h4 {
-    font-weight: normal;
-}
-
-@media (max-width: 600px) {
-    .receita {
-        width: 100%;
-    }
-
-    .imagem-receita {
-        height: 280px;
-    }
-
-    .informacoes {
-        justify-content: space-between;
-        padding: 15px 20px;
-        font-size: 14px;
-    }
-
-    .icone {
-        font-size: 19px;
-    }
-
-    .conteudo {
-        padding: 0 20px;
-    }
-
-    .categoria {
-        margin-bottom: 20px;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
-    h2 {
-        font-size: 21px;
-    }
-
-    .descricao {
-        font-size: 15px;
-    }
-
-    .ingredientes li,
-    .modo-preparo li {
-        font-size: 15px;
     }
 }

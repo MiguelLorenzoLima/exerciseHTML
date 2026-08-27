@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Receita</title>
+    <title>Concerto - Margarite Waltz - Miguel Lima</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/nav-new.css">
-    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/video.css">
 </head>
 
 <body>
@@ -40,13 +40,13 @@
                     <a href="index.html" class="nav-link" role="menuitem">Início</a>
                 </li>
                 <li role="none">
-                    <a href="concerto.html" class="nav-link" role="menuitem">Concerto</a>
+                    <a href="concerto.html" class="nav-link active" role="menuitem">Concerto</a>
                 </li>
                 <li role="none">
                     <a href="receita.html" class="nav-link" role="menuitem">Receita</a>
                 </li>
                 <li role="none">
-                    <a href="form.html" class="nav-link active" role="menuitem">Nova Receita</a>
+                    <a href="form.html" class="nav-link" role="menuitem">Nova Receita</a>
                 </li>
             </ul>
 
@@ -66,92 +66,101 @@
         </div>
     </nav>
 
-    <header class="form-header">
-        <h1>Adicionar nova receita</h1>
-        <p>Preencha os campos abaixo para cadastrar uma nova receita</p>
+    <header>
+        <h1>Concerto - Margarite Waltz - Miguel Lima</h1>
+        <p>Uma interpretação musical acompanhada pela história de seu instrumento</p>
     </header>
 
-    <main class="form-main">
-        <div class="form-container">
+    <main>
 
-            <form>
+        <section>
 
-                <div class="form-group">
-                    <label for="nome" class="form-label">Nome da receita</label>
-                    <input type="text" id="nome" name="nome" class="input" placeholder="Digite o nome da receita">
-                </div>
+            <div class="section-title">
+                <h2>O Instrumento</h2>
+                <span></span>
+            </div>
 
-                <div class="form-group">
-                    <label for="categoria" class="form-label">Categoria</label>
-                    <select id="categoria" name="categoria" class="select">
-                        <option value="">Selecione uma categoria</option>
-                        <option value="sobremesa">Sobremesa</option>
-                        <option value="almoco">Almoço</option>
-                        <option value="jantar">Jantar</option>
-                        <option value="lanche">Lanche</option>
-                        <option value="bebida">Bebida</option>
-                    </select>
-                </div>
+            <div class="museum-description">
+                <p>
+                    Este instrumento de cordas representa não apenas uma ferramenta para
+                    a produção musical, mas também uma peça marcada pela tradição,
+                    pelo trabalho artesanal e pela riqueza estética.
+                </p>
 
-                <div class="form-row">
-                    <div class="form-group form-group-half">
-                        <label for="tempo" class="form-label">Tempo de preparo</label>
-                        <input type="time" id="tempo" name="tempo" class="input">
-                    </div>
+                <p>
+                    Suas curvas cuidadosamente esculpidas, a textura da madeira e os
+                    detalhes de sua construção revelam a relação entre arte, técnica
+                    e música que acompanha a história dos instrumentos de cordas.
+                </p>
+            </div>
 
-                    <div class="form-group form-group-half">
-                        <label for="porcoes" class="form-label">Quantidade de porções</label>
-                        <input type="number" id="porcoes" name="porcoes" class="input" min="1" placeholder="Ex: 10">
-                    </div>
-                </div>
+            <div class="gallery">
 
-                <div class="form-group">
-                    <label for="ingredientes" class="form-label">Ingredientes</label>
-                    <textarea id="ingredientes" name="ingredientes" class="textarea" rows="6" placeholder="Digite os ingredientes da receita"></textarea>
-                </div>
+                <article class="card artwork">
 
-                <div class="form-group">
-                    <label for="preparo" class="form-label">Modo de preparo</label>
-                    <textarea id="preparo" name="preparo" class="textarea" rows="8" placeholder="Digite o modo de preparo"></textarea>
-                </div>
+                    <img src="img/viola1.jpg" alt="Vista frontal do violino">
 
-                <div class="form-group">
-                    <label class="form-label">Dificuldade</label>
-                    <div class="form-radio-group">
-                        <label class="form-label-inline">
-                            <input type="radio" id="facil" name="dificuldade" value="facil" class="input-radio">
-                            Fácil
-                        </label>
-                        <label class="form-label-inline">
-                            <input type="radio" id="medio" name="dificuldade" value="medio" class="input-radio">
-                            Médio
-                        </label>
-                        <label class="form-label-inline">
-                            <input type="radio" id="dificil" name="dificuldade" value="dificil" class="input-radio">
-                            Difícil
-                        </label>
-                    </div>
-                </div>
+                    <p>
+                        Na parte traseira, é possível observar com maior evidência
+                        os veios da madeira e seu acabamento artesanal. As características
+                        visuais da peça evidenciam o cuidado empregado na construção,
+                        transformando o instrumento em uma verdadeira expressão de
+                        arte e marcenaria musical.
+                    </p>
 
-                <div class="form-group">
-                    <label class="form-label-inline">
-                        <input type="checkbox" id="publicar" name="publicar" class="input-checkbox">
-                        Publicar receita imediatamente
-                    </label>
-                </div>
+                </article>
 
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Adicionar receita</button>
-                    <button type="reset" class="btn btn-secondary">Limpar formulário</button>
-                </div>
+                <article class="card artwork">
 
-            </form>
+                    <img src="img/viola2.jpg" alt="Vista traseira do violino">
 
-        </div>
+                    <p>
+                        Na vista frontal, destacam-se as formas clássicas do instrumento,
+                        com suas curvas simétricas, as aberturas em formato de "f"
+                        e o acabamento em madeira natural. O desenho do corpo foi
+                        cuidadosamente desenvolvido para unir estética e funcionalidade,
+                        contribuindo para a projeção e a qualidade sonora.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Seção do vídeo -->
+        <section class="video-section">
+
+            <div class="section-title">
+                <h2>Concerto</h2>
+                <span></span>
+            </div>
+
+            <div class="museum-description">
+                <p>
+                    <strong>Margarite Waltz</strong>
+                </p>
+
+                <p>
+                    Interpretação de Miguel Lima.
+                </p>
+            </div>
+
+            <div class="video-container">
+
+                <iframe src="https://www.youtube.com/embed/gGNMnkSc0zA" title="Concerto - Margarite Waltz - Miguel Lima"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
     </main>
 
     <footer class="site-footer">
-        <p>Acabou a página · By Miguel Lima</p>
+        <p>Concerto - Margarite Waltz · Miguel Lima</p>
     </footer>
 
 </body>
