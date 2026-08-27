@@ -5,36 +5,55 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f5f2;
-    color: #302b36;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f5f1e8;
+    color: #40372f;
     min-height: 100vh;
-    padding: 40px 20px;
+    padding: 0;
 }
 
-form {
+.form-header {
+    text-align: center;
+    padding: 80px 20px 50px;
+    background-color: #eee8dc;
+    border-bottom: 1px solid #d6cbbb;
+}
+
+.form-header h1 {
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #4a3b32;
+    margin-bottom: 15px;
+}
+
+.form-header p {
+    font-size: 18px;
+    color: #7a6b5d;
+    font-style: italic;
+}
+
+.form-container {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
     padding: 35px;
-    background-color: #fffdf9;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(92, 68, 110, 0.12);
 }
 
-h1 {
-    max-width: 700px;
-    margin: 0 auto 25px;
-    text-align: center;
-    color: #8064a2;
-    font-size: 32px;
+form {
+    width: 100%;
+    background-color: #faf8f3;
+    border: 1px solid #d8cebf;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(60, 45, 30, 0.08);
 }
 
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #5d4b6f;
+    color: #4a3b32;
 }
 
 input,
@@ -42,10 +61,11 @@ select,
 textarea {
     width: 100%;
     padding: 12px 14px;
-    border: 1px solid #d8cce2;
-    border-radius: 10px;
-    background-color: #fffefa;
-    color: #302b36;
+    border: 1px solid #d8cebf;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #40372f;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 15px;
     outline: none;
     transition: 0.2s;
@@ -54,8 +74,8 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #a98bc4;
-    box-shadow: 0 0 0 3px rgba(169, 139, 196, 0.18);
+    border-color: #a98d70;
+    box-shadow: 0 0 0 3px rgba(169, 141, 112, 0.18);
 }
 
 textarea {
@@ -67,7 +87,7 @@ input[type="radio"],
 input[type="checkbox"] {
     width: auto;
     margin-right: 6px;
-    accent-color: #9b7bbb;
+    accent-color: #a98d70;
 }
 
 input[type="radio"] + label,
@@ -75,18 +95,18 @@ input[type="checkbox"] + label {
     display: inline;
     margin-right: 18px;
     font-weight: normal;
-    color: #4f4657;
+    color: #6c6157;
 }
 
 input[type="file"] {
     padding: 9px;
-    background-color: #faf7fc;
+    background-color: #ffffff;
 }
 
 button {
     padding: 12px 22px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
@@ -94,35 +114,39 @@ button {
 }
 
 button[type="submit"] {
-    background-color: #a98bc4;
+    background-color: #a98d70;
     color: white;
 }
 
 button[type="submit"]:hover {
-    background-color: #9270b0;
+    background-color: #967a5f;
 }
 
 button[type="reset"] {
     margin-left: 10px;
-    background-color: #eee7f2;
-    color: #665574;
+    background-color: #ebe4d8;
+    color: #6c6157;
 }
 
 button[type="reset"]:hover {
-    background-color: #e2d8e9;
+    background-color: #d8cebf;
 }
 
 @media (max-width: 600px) {
-    body {
-        padding: 20px 12px;
+    .form-header {
+        padding: 55px 20px 40px;
+    }
+
+    .form-header h1 {
+        font-size: 30px;
+    }
+
+    .form-container {
+        padding: 20px 16px;
     }
 
     form {
         padding: 25px 20px;
-    }
-
-    h1 {
-        font-size: 26px;
     }
 
     button {
