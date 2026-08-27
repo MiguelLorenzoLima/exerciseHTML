@@ -13,13 +13,6 @@ body {
     color: #171717;
 }
 
-header h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-}
-
 #carroca {
     display: flex;
     flex-wrap: wrap;
