@@ -1,5 +1,4 @@
 
-
 .navbar {
     width: 100%;
     padding: 15px 20px;
@@ -59,13 +58,13 @@
 
 
 .nav-receita {
-    --nav-bg: #fffdf9;
-    --nav-border: #d8cce2;
-    --nav-shadow: rgba(92, 68, 110, 0.12);
-    --nav-text: #5d4b6f;
-    --nav-hover: #eee7f2;
-    --nav-hover-text: #665574;
-    --nav-active: #a98bc4;
+    --nav-bg: #faf8f3;
+    --nav-border: #d8cebf;
+    --nav-shadow: rgba(60, 45, 30, 0.12);
+    --nav-text: #6c6157;
+    --nav-hover: #ebe4d8;
+    --nav-hover-text: #4a3b32;
+    --nav-active: #a98d70;
     --nav-active-text: #ffffff;
 }
 
@@ -85,25 +84,25 @@
 
 
 .nav-principal {
-    --nav-bg: #ffffff;
-    --nav-border: #dddddd;
-    --nav-shadow: rgba(0, 0, 0, 0.10);
-    --nav-text: #333333;
-    --nav-hover: #eeeeee;
-    --nav-hover-text: #111111;
-    --nav-active: #171717;
+    --nav-bg: #faf8f3;
+    --nav-border: #d8cebf;
+    --nav-shadow: rgba(60, 45, 30, 0.12);
+    --nav-text: #6c6157;
+    --nav-hover: #ebe4d8;
+    --nav-hover-text: #4a3b32;
+    --nav-active: #a98d70;
     --nav-active-text: #ffffff;
 }
 
 
 .nav-formulario {
-    --nav-bg: #fffdf9;
-    --nav-border: #d8cce2;
-    --nav-shadow: rgba(92, 68, 110, 0.12);
-    --nav-text: #5d4b6f;
-    --nav-hover: #eee7f2;
-    --nav-hover-text: #665574;
-    --nav-active: #a98bc4;
+    --nav-bg: #faf8f3;
+    --nav-border: #d8cebf;
+    --nav-shadow: rgba(60, 45, 30, 0.12);
+    --nav-text: #6c6157;
+    --nav-hover: #ebe4d8;
+    --nav-hover-text: #4a3b32;
+    --nav-active: #a98d70;
     --nav-active-text: #ffffff;
 }
 

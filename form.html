@@ -10,14 +10,14 @@
 </head>
 
 <body>
- <nav class="navbar nav-formulario">
+    <nav class="navbar nav-formulario">
         <ul>
             <li>
                 <a href="index.html">Início</a>
             </li>
 
             <li>
-                <a href="receita.html">Receita</a>
+                <a href="listas.html">Receita</a>
             </li>
 
             <li>
@@ -29,81 +29,87 @@
             </li>
         </ul>
     </nav>
-    <h1>Adicionar nova receita</h1>
 
-    <form>
+    <div class="form-header">
+        <h1>Adicionar nova receita</h1>
+        <p>Preencha os campos abaixo para cadastrar uma nova receita</p>
+    </div>
 
-        <label for="nome">Nome da receita:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite o nome da receita">
+    <div class="form-container">
+        <form>
 
-        <br><br>
+            <label for="nome">Nome da receita:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o nome da receita">
 
-        <label for="categoria">Categoria:</label>
-        <select id="categoria" name="categoria">
-            <option value="">Selecione uma categoria</option>
-            <option value="sobremesa">Sobremesa</option>
-            <option value="almoco">Almoço</option>
-            <option value="jantar">Jantar</option>
-            <option value="lanche">Lanche</option>
-            <option value="bebida">Bebida</option>
-        </select>
+            <br><br>
 
-        <br><br>
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria">
+                <option value="">Selecione uma categoria</option>
+                <option value="sobremesa">Sobremesa</option>
+                <option value="almoco">Almoço</option>
+                <option value="jantar">Jantar</option>
+                <option value="lanche">Lanche</option>
+                <option value="bebida">Bebida</option>
+            </select>
 
-        <label for="tempo">Tempo de preparo:</label>
-        <input type="time" id="tempo" name="tempo">
+            <br><br>
 
-        <br><br>
+            <label for="tempo">Tempo de preparo:</label>
+            <input type="time" id="tempo" name="tempo">
 
-        <label for="porcoes">Quantidade de porções:</label>
-        <input type="number" id="porcoes" name="porcoes" min="1" placeholder="Ex: 10">
+            <br><br>
 
-        <br><br>
+            <label for="porcoes">Quantidade de porções:</label>
+            <input type="number" id="porcoes" name="porcoes" min="1" placeholder="Ex: 10">
 
-        <label for="ingredientes">Ingredientes:</label>
-        <textarea
-            id="ingredientes"
-            name="ingredientes"
-            rows="6"
-            placeholder="Digite os ingredientes da receita">
-        </textarea>
+            <br><br>
 
-        <br><br>
+            <label for="ingredientes">Ingredientes:</label>
+            <textarea
+                id="ingredientes"
+                name="ingredientes"
+                rows="6"
+                placeholder="Digite os ingredientes da receita">
+            </textarea>
 
-        <label for="preparo">Modo de preparo:</label>
-        <textarea
-            id="preparo"
-            name="preparo"
-            rows="8"
-            placeholder="Digite o modo de preparo">
-        </textarea>
+            <br><br>
 
-        <br><br>
+            <label for="preparo">Modo de preparo:</label>
+            <textarea
+                id="preparo"
+                name="preparo"
+                rows="8"
+                placeholder="Digite o modo de preparo">
+            </textarea>
 
-        <label>Tempo de dificuldade:</label>
-        
-        <br>
+            <br><br>
 
-        <input type="radio" id="facil" name="dificuldade" value="facil">
-        <label for="facil">Fácil</label>
+            <label>Dificuldade:</label>
+            
+            <br>
 
-        <input type="radio" id="medio" name="dificuldade" value="medio">
-        <label for="medio">Médio</label>
+            <input type="radio" id="facil" name="dificuldade" value="facil">
+            <label for="facil">Fácil</label>
 
-        <input type="radio" id="dificil" name="dificuldade" value="dificil">
-        <label for="dificil">Difícil</label>
+            <input type="radio" id="medio" name="dificuldade" value="medio">
+            <label for="medio">Médio</label>
 
-        <br><br>
+            <input type="radio" id="dificil" name="dificuldade" value="dificil">
+            <label for="dificil">Difícil</label>
 
-        <input type="checkbox" id="publicar" name="publicar">
-        <label for="publicar">Publicar receita imediatamente</label>
+            <br><br>
 
-        <br><br>
+            <input type="checkbox" id="publicar" name="publicar">
+            <label for="publicar">Publicar receita imediatamente</label>
 
-        <button type="submit">Adicionar receita</button>
-        <button type="reset">Limpar formulário</button>
+            <br><br>
 
-    </form>
+            <button type="submit">Adicionar receita</button>
+            <button type="reset">Limpar formulário</button>
+
+        </form>
+    </div>
 
 </body>
 

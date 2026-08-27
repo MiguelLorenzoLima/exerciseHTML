@@ -5,19 +5,31 @@
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #ffffff;
-    color: #171717;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f5f1e8;
+    color: #40372f;
+    line-height: 1.7;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px 50px;
+    background-color: #eee8dc;
+    border-bottom: 1px solid #d6cbbb;
 }
 
 header h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #4a3b32;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 18px;
+    color: #7a6b5d;
+    font-style: italic;
 }
 
 #carroca {
@@ -85,6 +97,14 @@ footer h4 {
 
     #carroca img:hover {
         flex: 1 1 60%;
+    }
+
+    header {
+        padding: 55px 20px 40px;
+    }
+
+    header h1 {
+        font-size: 30px;
     }
 }
 
@@ -188,8 +208,9 @@ footer {
     width: 100%;
     padding: 25px;
     text-align: center;
-    background-color: #f5f5f5;
-    color: #555;
+    background-color: #e4dccf;
+    color: #76695d;
+    border-top: 1px solid #d2c6b7;
 }
 
 footer h4 {
