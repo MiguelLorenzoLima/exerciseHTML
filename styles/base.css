@@ -68,6 +68,7 @@
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-base: 0.3s ease;
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --- Reset & Base --- */
@@ -80,7 +81,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -94,6 +95,7 @@ body {
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 img {
@@ -185,9 +187,11 @@ p {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
     text-align: center;
     line-height: 1.4;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn:active {
@@ -201,6 +205,8 @@ p {
 
 .btn-primary:hover {
     background-color: var(--color-btn-primary-hover);
+    box-shadow: 0 4px 16px rgba(169, 141, 112, 0.3);
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -225,7 +231,12 @@ p {
     font-family: var(--font-body);
     font-size: 15px;
     outline: none;
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: var(--color-text-light);
 }
 
 .input:focus,
@@ -233,6 +244,7 @@ p {
 .textarea:focus {
     border-color: var(--color-focus);
     box-shadow: 0 0 0 3px var(--color-focus-ring);
+    background-color: #ffffff;
 }
 
 .textarea {
@@ -246,6 +258,7 @@ p {
     background-repeat: no-repeat;
     background-position: right 14px center;
     padding-right: 36px;
+    cursor: pointer;
 }
 
 /* Radio & Checkbox */
@@ -327,10 +340,60 @@ p {
     border: 0;
 }
 
+/* --- Skip to content --- */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-accent);
+    color: var(--color-text-on-accent);
+    padding: 12px 24px;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 10000;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 /* --- Focus visible for accessibility --- */
 :focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
+}
+
+/* --- Reveal animation (used by GSAP, fallback for no-JS) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* --- Responsive base --- */

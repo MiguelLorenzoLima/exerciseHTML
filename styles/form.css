@@ -57,6 +57,18 @@ header p {
     flex: 1;
 }
 
+/* --- Fieldset --- */
+.form-fieldset {
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-sm);
+    padding: 20px 24px 16px;
+    margin-bottom: 28px;
+}
+
+.form-fieldset legend {
+    padding: 0 8px;
+}
+
 /* --- Radio group --- */
 .form-radio-group {
     display: flex;

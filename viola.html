@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Viola 3D interativa - Explore o instrumento em visualização tridimensional.">
+    <title>Viola 3D — Concerto Visual</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/nav-new.css">
+    <link rel="stylesheet" href="styles/viola-showroom.css">
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+    <nav class="navbar" aria-label="Navegação principal">
+        <div class="navbar-inner">
+            <ul class="navbar-nav" role="menubar">
+                <li role="none">
+                    <a href="index.html" class="nav-link" role="menuitem">Início</a>
+                </li>
+                <li role="none">
+                    <a href="concerto.html" class="nav-link" role="menuitem">Concerto</a>
+                </li>
+                <li role="none">
+                    <a href="receita.html" class="nav-link" role="menuitem">Receita</a>
+                </li>
+                <li role="none">
+                    <a href="form.html" class="nav-link" role="menuitem">Nova Receita</a>
+                </li>
+                <li role="none">
+                    <a href="viola.html" class="nav-link active" role="menuitem" aria-current="page">Viola 3D</a>
+                </li>
+            </ul>
+            <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span class="nav-hamburger-line"></span>
+                <span class="nav-hamburger-line"></span>
+                <span class="nav-hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" aria-hidden="true"></div>
+
+    <header class="viola-header">
+        <p class="viola-eyebrow">INSTRUMENTO</p>
+        <h1>Uma viola em 3D</h1>
+        <p class="viola-subtitle">Movimente o mouse, arraste para girar e observe o instrumento em rotação suave.</p>
+    </header>
+
+    <main id="main-content">
+
+        <section class="viola-stage-section">
+            <div id="viola-stage" class="viola-stage" aria-label="Visualização 3D interativa de uma viola"></div>
+
+            <div class="viola-controls">
+                <button id="toggle" type="button" class="btn violl-btn-toggle">Pausar rotação</button>
+                <span class="viola-hint">Arraste para controlar · Zoom com scroll</span>
+            </div>
+        </section>
+
+        <section class="viola-info">
+            <div class="viola-info-inner">
+                <div class="viola-info-block">
+                    <h2>Sobre o instrumento</h2>
+                    <p>A viola de cocho é um instrumento de cordas da tradição musical brasileira,
+                       construída artesanalmente em madeira. Esta visualização 3D reconstrói
+                       o corpo do instrumento a partir de suas fotografias reais, permitindo
+                       explorar suas curvas, textura e detalhes construtivos.</p>
+                </div>
+                <div class="viola-info-block">
+                    <h2>Como interagir</h2>
+                    <p>Use o mouse para arrastar e girar o instrumento. O scroll controla o zoom.
+                       O botão abaixo pausa ou retoma a rotação automática. O objeto flutua
+                       suavemente e reage ao movimento do cursor.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>realizzato da Miguel Lima</p>
+    </footer>
+
+    <script type="module" src="js/viola-3d.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

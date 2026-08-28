@@ -197,6 +197,13 @@ main {
     position: absolute;
     left: -40px;
     top: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modo-preparo li:hover::before {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    border-color: var(--color-accent);
 }
 
 .modo-preparo li:last-child {
